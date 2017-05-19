@@ -4,18 +4,18 @@
 
 		Contact for more information:    
 		a. <developer@ihealthlabs.com>(US)  
-		b. <louie@ihealthlabs.com>(Europe)  
+		b. <noah@ihealthlabs.com>(Europe)  
 		c. <huhaiyun@ihealthlabs.com.cn>(Other)  
-	
+
 		After received a invitation, you will be able to register your application for iOS and Android platform.  
 
 </br>    
-         
+
 # iHealth Device Developer Documentation
 
 
-This document describes how to use the iHealth Device SDK to accomplish the major operation: Connection Device, Online Measurement, Offline Measurement and iHealth Device Management. 
-  
+This document describes how to use the iHealth Device SDK to accomplish the major operation: Connection Device, Online Measurement, Offline Measurement and iHealth Device Management.
+
 ### Latest version
 
 2.3.3
@@ -28,7 +28,7 @@ iHealth Bp5
 iHealth Bp7  
 iHealth Bp7s  
 iHealth Bp550BT  
-iHealth Bp5s
+iHealth Bp5s  
 iHealth KD926  
 iHealth KD723  
 iHealth Abi  
@@ -39,11 +39,11 @@ iHealth Hs5
 iHealth Hs6  
 iHealth Am3  
 iHealth Am3s  
-iHealth Am4
+iHealth Am4  
 iHealth Po3  
-iHealth BG1(AG-680)  
-iHealth BG5 
-iHealth BG5l
+iHealth Bg1  
+iHealth Bg5		
+iHealth Bg5l
 
 
 
@@ -51,21 +51,21 @@ iHealth BG5l
 
 iHealth Device SDK communicate with iHealth Device by USB, Bluetooth, BluetoothLe, Wifi or Audio.  
 **USB:** iHealth Bp3m  
-**Bluetooth:** iHealth Bp5, iHealth Bp7, iHealth Bp7s, iHealth Abi, iHealth Hs3, iHealth Hs4, iHealth BG5  
-**BluetoothLe:** iHealth Bp3l, iHealth Bp550BT, iHealth Bp5s, iHealth KD926, iHealth KD723, iHealth Am3, iHealth Am3s, iHealth Po3, iHealth Hs4s, iHealth BG5l  
-**Audio:** iHealth BG1(AG-680)  
+**Bluetooth:** iHealth Bp5, iHealth Bp7, iHealth Bp7s, iHealth Abi, iHealth Hs3, iHealth Hs4, iHealth Bg5  
+**BluetoothLe:** iHealth Am3, iHealth Am3s, iHealth Am4, iHealth Bp3l, iHealth Bp550BT, iHealth Bp5s, iHealth KD723, iHealth KD926, iHealth Hs4s, iHealth Po3, iHealth BG5l  
+**Audio:** iHealth Bg1  
 **Wifi:** iHealth Hs5, iHealth Hs6
 
 
 ### Configure
 
 Need to introduce the development kit iHealthLibrary.jar.  
-Support phone os 4.0+: ABI, BP3, BP5, BP7, BP7S, BG1, BG5, BP, HS3, HS5, HS4S, HS6  
-Support phone os 4.4+: AM3, AM3S, AM4, HS4, PO3, BP3L, KD926, KD723, Bp550BT,
+Support phone os 4.0+: ABI, BP3M, BP5, BP7, BP7S, BG1, BG5, HS3, HS4S, HS5, HS6  
+Support phone os 4.4+: AM3, AM3S, AM4, BP3L, BP5S, BP550BT, KD723, KD926, HS4, PO3, BG5L
 
 Specific configuration as shown below:
 
-> Need to add ACCESS_COARSE_LOCATION permission in Android 6.0。
+> Need ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION permission to get scan results in Android API 23+.
 
 ![box-model](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/public/user_permission.png?raw=true)
 
@@ -79,13 +79,13 @@ Specific configuration as shown below:
 Contact for more information:  
 <enterprise@ihealthlabs.com>    
 <developer@ihealthlabs.com>(US)  
-<louie@ihealthlabs.com>(Europe)  
+<noah@ihealthlabs.com>(Europe)  
 
 ### How to use the iHealth SDK
 
 ##### 1. Initialization iHealth SDK.
 
-``` 
+```
 iHealthDevicesManager.getInstance().init(MainActivity.this);
 
 ```
@@ -112,10 +112,10 @@ iHealthDevicesManager.getInstance().sdkUserInAuthor(MainActivity.this, userName,
 If verify success, all the api avaliable, else 10 trial days you will get.
 ```
 
-##### 5. Discovery a iHealth device.
+##### 5. Discovery a iHealth device or multi devices.
 
 ```
-int type = iHealthDevicesManager.DISCOVERY_BP5
+long type = iHealthDevicesManager.DISCOVERY_BP5 | iHealthDevicesManager.DISCOVERY_AM3S;
 iHealthDevicesManager.getInstance().startDiscovery(type);
 ```
 
@@ -157,7 +157,7 @@ Am3sControl am3sControl = iHealthDevicesManager.getInstance().getAm3sControl(mac
 /*
 * Get Bg1 device controller
 */
-Bg1Control bg1Control = iHealthDevicesManager.getInstance().getBg1Control(mac);
+Bg1Control bg1Control = Bg1Control.getInstance();
 
 /*
 * Get Bg5 device controller
@@ -228,7 +228,7 @@ Hs5Control hs5Control = iHealthDevicesManager.getInstance().getHs5Control(mac);
 * Get Hs6 device controller
 */
 HS6Control hs6Control = new HS6Control(userName, this, iHealthDevicesManager.TYPE_HS6, mIHealthDeviceHs6Callback);
- 
+
 /*
 * Get Po3 device controller
 */
