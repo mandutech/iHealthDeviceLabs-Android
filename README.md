@@ -61,7 +61,7 @@ iHealth Device SDK communicate with iHealth Device by USB, Bluetooth, BluetoothL
 
 Need to introduce the development kit iHealthLibrary.jar.  
 Support phone os 4.0+: ABI, BP3M, BP5, BP7, BP7S, BG1, BG5, HS3, HS4S, HS5, HS6  
-Support phone os 4.4+: AM3, AM3S, AM4, BP3L, BP5S, BP550BT, KD723, KD926, HS4, PO3, BG5L
+Support phone os 4.3+: AM3, AM3S, AM4, BP3L, BP5S, BP550BT, KD723, KD926, HS4, PO3, BG5L
 
 Specific configuration as shown below:
 
