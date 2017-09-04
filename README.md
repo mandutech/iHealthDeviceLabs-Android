@@ -1,15 +1,15 @@
 # Attention：
 
-		Before you use SDK, please get permission from iHealth team, otherwise you will not be able to use SDK (connect failed)      
+	Before you use SDK, please get permission from iHealth team, otherwise you will not be able to use SDK (connect failed)      
 
-		Contact for more information:    
-		a. <developer@ihealthlabs.com>(US)  
-		b. <noah@ihealthlabs.com>(Europe)  
-		c. <huhaiyun@ihealthlabs.com.cn>(Other)  
+	Contact for more information:    
 
-		After received a invitation, you will be able to register your application for iOS and Android platform.  
+	a. <yuchen.wang@ihealthlabs.com>(US)  
+	b. <noah@ihealthlabs.com>(Europe)  
+	c. <enterprise@ihealthlabs.com>(Other)  
 
-</br>    
+	After received a invitation, you will be able to register your application for iOS and Android platform.  
+
 
 # iHealth Device Developer Documentation
 
@@ -18,32 +18,23 @@ This document describes how to use the iHealth Device SDK to accomplish the majo
 
 ### Latest version
 
-2.3.3
+2.3.4
 
 ### Support iHealth Device for Android
+	AM:
+	iHealth Am3  iHealth Am3s  iHealth Am4  
 
-iHealth Bp3m   
-iHealth Bp3l  
-iHealth Bp5  
-iHealth Bp7  
-iHealth Bp7s  
-iHealth Bp550BT  
-iHealth Bp5s  
-iHealth KD926  
-iHealth KD723  
-iHealth Abi  
-iHealth Hs3  
-iHealth Hs4  
-iHealth Hs4s  
-iHealth Hs5  
-iHealth Hs6  
-iHealth Am3  
-iHealth Am3s  
-iHealth Am4  
-iHealth Po3  
-iHealth Bg1  
-iHealth Bg5		
-iHealth Bg5l
+	BG:
+	iHealth Bg1  iHealth Bg5		
+
+	BP:
+	iHealth Bp3l   iHealth Bp3m  iHealth Bp5  iHealth Bp7  iHealth Bp7s  iHealth Bp550BT  iHealth KD723  iHealth KD926  iHealth Bpm1	iHealth Abi  iHealth ABPM
+
+	HS:
+	iHealth Hs3  iHealth Hs4  iHealth Hs4s  iHealth Hs5  iHealth Hs6  iHealth HS2  
+
+	PO:
+	iHealth Po3
 
 
 
@@ -51,17 +42,17 @@ iHealth Bg5l
 
 iHealth Device SDK communicate with iHealth Device by USB, Bluetooth, BluetoothLe, Wifi or Audio.  
 **USB:** iHealth Bp3m  
-**Bluetooth:** iHealth Bp5, iHealth Bp7, iHealth Bp7s, iHealth Abi, iHealth Hs3, iHealth Hs4, iHealth Bg5  
-**BluetoothLe:** iHealth Am3, iHealth Am3s, iHealth Am4, iHealth Bp3l, iHealth Bp550BT, iHealth Bp5s, iHealth KD723, iHealth KD926, iHealth Hs4s, iHealth Po3, iHealth BG5l  
+**Bluetooth:** iHealth Bp5, iHealth Bp7, iHealth Bp7s, iHealth Abi, iHealth Hs3, iHealth Hs4s, iHealth Bg5  
+**BluetoothLe:** iHealth Am3, iHealth Am3s, iHealth Am4, iHealth Bp3l, iHealth Bp550BT, iHealth KD723, iHealth KD926,iHealth ABPM, iHealth Hs4, iHealth Po3, iHealth HS2 	 	
 **Audio:** iHealth Bg1  
-**Wifi:** iHealth Hs5, iHealth Hs6
+**Wifi:** iHealth Bpm1,	iHealth Hs5, iHealth Hs6
 
 
 ### Configure
 
 Need to introduce the development kit iHealthLibrary.jar.  
-Support phone os 4.0+: ABI, BP3M, BP5, BP7, BP7S, BG1, BG5, HS3, HS4S, HS5, HS6  
-Support phone os 4.3+: AM3, AM3S, AM4, BP3L, BP5S, BP550BT, KD723, KD926, HS4, PO3, BG5L
+Support phone os 4.0+: ABI, BP3M, BP5, BP7, BP7S, BPM1,	BG1, BG5, HS3, HS4S, HS5, HS6  
+Support phone os 4.3+: AM3, AM3S, AM4, BP3L, BP550BT, KD723, KD926,	ABPM, HS4, PO3, HS2
 
 Specific configuration as shown below:
 
@@ -77,9 +68,9 @@ Specific configuration as shown below:
 [Click this link](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/doc/Developer_Registration_Application_Instruction.md)   
 
 Contact for more information:  
-<enterprise@ihealthlabs.com>    
-<developer@ihealthlabs.com>(US)  
+<yuchen.wang@ihealthlabs.com>(US)  
 <noah@ihealthlabs.com>(Europe)  
+<enterprise@ihealthlabs.com>(Other)
 
 ### How to use the iHealth SDK
 
@@ -193,11 +184,6 @@ Bp7sControl bp7sControl = iHealthDevicesManager.getInstance().getBp7sControl(mac
 * Get Bp550BT device controller
 */
 Bp550BTControl bp550BTControl = iHealthDevicesManager.getInstance().getBp550BTControl(mac);
-
-/*
-* Get Bp926 device controller
-*/
-Bp926Control bp926Control = iHealthDevicesManager.getInstance().getBp926Control(mac);
 
 /*
 * Get Bp926 device controller

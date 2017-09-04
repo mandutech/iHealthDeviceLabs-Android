@@ -73,3 +73,14 @@ Connect will fail on Android 7.0 with devices as follows:
 8. AM4   Firmware Version < 1.4.4
 
 ```
+
+### 5. Android 8.0 connect problem   
+
+```
+Connect will fail on Android 8.0 with devices as follows:
+1. HS4  BT Version <= 1.0.8
+2. PO3  BT Version <= 1.0.8
+3. PO3M BT Version <= 1.0.8
+4. BP3L BT Version <= 1.2.4
+5. KN-550 BT Version <= 1.2.4
+```
