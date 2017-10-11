@@ -1,5 +1,16 @@
 # iHealth SDK Release Note
 
+### V2.3.5
+Release Date: 2017-10-11
+```
+Description:
+	1. Added TS28B support
+	2. Fix the BP3L interrupt measurement failure problem
+	3. Fix the callback crash problem
+	4. Various other bug fixes
+
+```
+
 ### V2.3.4
 Release Date: 2017-9-3
 ```
