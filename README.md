@@ -28,7 +28,7 @@ This document describes how to use the iHealth Device SDK to accomplish the majo
 	iHealth Bg1  iHealth Bg5		
 
 	BP:
-	iHealth Bp3l   iHealth Bp3m  iHealth Bp5  iHealth Bp7  iHealth Bp7s  iHealth Bp550BT  iHealth KD723  iHealth KD926  iHealth Bpm1	iHealth Abi  iHealth ABPM
+	iHealth Bp3l   iHealth Bp3m  iHealth Bp5  iHealth Bp7  iHealth Bp7s  iHealth Bp550BT  Continua BP iHealth KD723  iHealth KD926  iHealth Bpm1	iHealth Abi  iHealth ABPM
 
 	HS:
 	iHealth Hs3  iHealth Hs4  iHealth Hs4s  iHealth Hs5  iHealth Hs6  iHealth HS2  
@@ -36,6 +36,9 @@ This document describes how to use the iHealth Device SDK to accomplish the majo
 	PO:
 	iHealth Po3
 
+	Thermometer:
+
+	THV3  TS28B
 
 
 ## How to use the iHealth SDK
@@ -43,7 +46,7 @@ This document describes how to use the iHealth Device SDK to accomplish the majo
 iHealth Device SDK communicate with iHealth Device by USB, Bluetooth, BluetoothLe, Wifi or Audio.  
 **USB:** iHealth Bp3m  
 **Bluetooth:** iHealth Bp5, iHealth Bp7, iHealth Bp7s, iHealth Abi, iHealth Hs3, iHealth Hs4s, iHealth Bg5  
-**BluetoothLe:** iHealth Am3, iHealth Am3s, iHealth Am4, iHealth Bp3l, iHealth Bp550BT, iHealth KD723, iHealth KD926,iHealth ABPM, iHealth Hs4, iHealth Po3, iHealth HS2 	 	
+**BluetoothLe:** iHealth Am3, iHealth Am3s, iHealth Am4, iHealth Bp3l, iHealth Bp550BT, iHealth KD723, iHealth KD926,iHealth ABPM, iHealth Hs4, iHealth Po3, iHealth HS2,	THV3,	TS28B
 **Audio:** iHealth Bg1  
 **Wifi:** iHealth Bpm1,	iHealth Hs5, iHealth Hs6
 
